@@ -1,0 +1,10 @@
+name: addWindow
+main: Karanpatel567\main
+version: 1.0.0
+api: [3.0.0]
+commands:
+  addwindow:
+    description: Sends chest inventory
+permissions:
+  addwindow.command:
+    description: Permission to use the command addwindow.
