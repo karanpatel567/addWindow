@@ -46,7 +46,7 @@ class main extends PluginBase{
 		}
 		$player->addWindow($tile->getInventory());
 	}
-	public function onCommand(CommandSender $sender, Command $cmd, $labels, array $args){
+	public function onCommand(CommandSender $sender, Command $cmd, $labels, array $args) :bool{
 		if(strtolower($cmd->getName()) == "addwindow"){
 			if($sender->hasPermission("addwindow.command")){
 				$sender->sendMessage(c::YELLOW. "Sending Inventory! Please be patient.");
@@ -57,6 +57,7 @@ class main extends PluginBase{
 				$sender->sendMessage(c::RED. "You don't have permission to use this command!");
 			}
 		}
+		return true;
 	}
 	public function onDisable(){
 		$this->getLogger()->Info(c::RED. "addWindow by Karan disabled!");
